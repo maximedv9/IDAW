@@ -1,11 +1,51 @@
-<html>
+<!DOCTYPE html>
+<html class="h-100">
   <head>
     <title>TP1 IDAW</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="TP1.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/bootstrap-grid.css" />
   </head>
-  <body>
-    <h1>Titre1</h1>
-    <p>paragraphe 1</p>
+  <style>
+    .header_row {
+      background-color:lemonchiffon;
+    }
+    .menu {   
+      background-color:bisque;
+    }
+    .menu_row1 {
+      background-color: beige;
+      padding-left:25px;
+    }
+    .menu_row2 {
+      background-color:bisque;
+      padding-left:25px;
+    }
+    .menu_row3 {
+      background-color:blanchedalmond;
+      padding-left:25px;
+    }
+    .container_main {
+      background-color:blanchedalmond;
+    }
+  </style>
+  <header>
+    <div class="container-fluid">
+      <div class="row header_row justify-content-left align-items-center">
+        <div class="col-4"><h1>Portfolio</h1></div>
+        <div class="col-4"><h2>de Veyrac Maxime</h2></div>
+      </div>
+    </div>
+  </header>
+  <body class="container_main h-100">
+    <div class="menu w-25 h-100">
+      <div class="row menu_row1">
+        <h3>Menu</h3>
+      </div>
+      <div class="row menu_row2"><li><a href="index.html" class="link-secondary">Accueil</a></li></div>
+      <div class="row menu_row3"><li><a href="cv.html" class="link-secondary">CV</a></li></div>
+      <div class="row menu_row2"><li><a href="projects.html" class="link-secondary">Projects</a></li></div>
+      </nav>
+    </div>
   </body>
 </html>
