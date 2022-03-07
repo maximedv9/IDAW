@@ -1,51 +1,37 @@
 <!DOCTYPE html>
 <html class="h-100">
   <head>
-    <title>TP1 IDAW</title>
+    <title>Home | Portfolio</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="css/bootstrap.css" />
-    <link rel="stylesheet" href="css/bootstrap-grid.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
-  <style>
-    .header_row {
-      background-color:lemonchiffon;
-    }
-    .menu {   
-      background-color:bisque;
-    }
-    .menu_row1 {
-      background-color: beige;
-      padding-left:25px;
-    }
-    .menu_row2 {
-      background-color:bisque;
-      padding-left:25px;
-    }
-    .menu_row3 {
-      background-color:blanchedalmond;
-      padding-left:25px;
-    }
-    .container_main {
-      background-color:blanchedalmond;
-    }
-  </style>
-  <header>
-    <div class="container-fluid">
-      <div class="row header_row justify-content-left align-items-center">
-        <div class="col-4"><h1>Portfolio</h1></div>
-        <div class="col-4"><h2>de Veyrac Maxime</h2></div>
+  <body>
+    <div class="navbar">
+      <div class="container flex">
+        <h1 class="logo">Portfolio</h1>
+        <h2 class="logo">Maxime de Veyrac</h2>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="projects.html">Projects</a></li>
+          </ul>
+        </nav>
       </div>
     </div>
-  </header>
-  <body class="container_main h-100">
-    <div class="menu w-25 h-100">
-      <div class="row menu_row1">
-        <h3>Menu</h3>
+    <section class="showcase">
+      <div class="container grid">
+        <div class="showcase-text">
+          <h1>Home</h1>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam
+            ducimus est recusandae nemo amet rerum nesciunt sit, illum
+            consectetur quidem laborum corrupti mollitia beatae, sapiente vero!
+            Voluptates dicta rerum aut!
+          </p>
+          <a href="features.html">Read More</a>
+        </div>
       </div>
-      <div class="row menu_row2"><li><a href="index.html" class="link-secondary">Accueil</a></li></div>
-      <div class="row menu_row3"><li><a href="cv.html" class="link-secondary">CV</a></li></div>
-      <div class="row menu_row2"><li><a href="projects.html" class="link-secondary">Projects</a></li></div>
-      </nav>
-    </div>
+    </section>
   </body>
 </html>
