@@ -3,19 +3,9 @@ require_once('template_header.php');
 ?>
 
 <body>
-  <div class="navbar">
-    <div class="container flex">
-      <h1 class="logo">Portfolio</h1>
-      <h2 class="logo">Maxime de Veyrac</h2>
-      <nav>
-        <ul>
-          <li><a id="currentpage" href="index.php">Home</a></li>
-          <li><a href="cv.php">CV</a></li>
-          <li><a href="projects.php">Projects</a></li>
-        </ul>
-      </nav>
-    </div>
-  </div>
+  <?php
+  require_once('template_menu.php')
+  ?>
   <section class="showcase">
     <div class="container grid">
       <div class="card">
@@ -30,11 +20,7 @@ require_once('template_header.php');
       </div>
     </div>
   </section>
-  <footer class="bottom">
-    <div class="container flex">
-      <p>IMT Nord Europe</p>
-      <p>IDAW 2020</p>
-      <p>Maxime de Veyrac</p>
-    </div>
-  </footer>
+  <?php
+  require_once('template_footer.php');
+  ?>
 </body>
