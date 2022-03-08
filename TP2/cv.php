@@ -4,7 +4,8 @@ require_once('template_header.php');
 
 <body>
   <?php
-  require_once('template_menu.php')
+  require_once('template_menu.php');
+  renderMenuToHTML('cv');
   ?>
   <section class="showcase">
     <div class="container">
