@@ -10,7 +10,7 @@ require_once('template_header.php');
   <section class="showcase">
     <div class="container grid">
       <div class="card">
-        <h1>Project 1</h1>
+        <h2>Project 1</h2>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam
           ducimus est recusandae nemo amet rerum nesciunt sit, illum
@@ -19,7 +19,7 @@ require_once('template_header.php');
         </p>
       </div>
       <div class="card">
-        <h1>Project 2</h1>
+        <h2>Project 2</h2>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam
           ducimus est recusandae nemo amet rerum nesciunt sit, illum
@@ -28,7 +28,7 @@ require_once('template_header.php');
         </p>
       </div>
       <div class="card">
-        <h1>Project 3</h1>
+        <h2>Project 3</h2>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam
           ducimus est recusandae nemo amet rerum nesciunt sit, illum

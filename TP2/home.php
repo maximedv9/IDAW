@@ -2,7 +2,7 @@
     <section class="showcase">
         <div class="container grid">
             <div class="card">
-                <h2>Infos Technique</h2>
+                <h2>Home</h2>
                 <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam
                     ducimus est recusandae nemo amet rerum nesciunt sit, illum

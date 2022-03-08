@@ -1,5 +1,12 @@
 <?php
-require_once('template_header.php');
+require_once("template_header.php");
+?>
+
+<?php
+$currentPageId = 'home';
+if (isset($_GET['page'])) {
+  $currentPageId = $_GET['page'];
+}
 ?>
 
 <body>
@@ -7,21 +14,16 @@ require_once('template_header.php');
   require_once('template_menu.php');
   renderMenuToHTML('index');
   ?>
-  <section class="showcase">
-    <div class="container grid">
-      <div class="card">
-        <h1>Home</h1>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam
-          ducimus est recusandae nemo amet rerum nesciunt sit, illum
-          consectetur quidem laborum corrupti mollitia beatae, sapiente vero!
-          Voluptates dicta rerum aut!
-        </p>
-        <a href="features.php">Read More</a>
-      </div>
-    </div>
+  <section class="corps">
+    <?php
+    $pageToInclude = $currentPageId . ".php";
+    if (is_readable($pageToInclude))
+      require_once($pageToInclude);
+    else
+      require_once("error.php");
+    ?>
   </section>
   <?php
-  require_once('template_footer.php');
+  require_once("template_footer.php");
   ?>
 </body>
