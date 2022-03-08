@@ -10,6 +10,7 @@ body {
   font-family: "PT Sans", sans-serif;
   color: #333;
   line-height: 1.6;
+  height: 100%;
 }
 
 ul {
@@ -61,7 +62,8 @@ img {
 }
 
 .showcase {
-  height: 400px;
+  padding: 20px;
+  height: 500px;
   background-color: rgb(179, 211, 235);
 }
 
