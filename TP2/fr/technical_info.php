@@ -9,7 +9,6 @@
                     consectetur quidem laborum corrupti mollitia beatae, sapiente vero!
                     Voluptates dicta rerum aut!
                 </p>
-                <a href="features.php">Read More</a>
             </div>
         </div>
     </section>

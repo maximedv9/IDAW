@@ -7,12 +7,15 @@ $currentPageId = 'home';
 if (isset($_GET['page'])) {
   $currentPageId = $_GET['page'];
 }
+if (isset($_GET['lang'])) {
+  $currentPageLang = $_GET['lang'];
+}
 ?>
 
 <body>
   <?php
   require_once('template_menu.php');
-  renderMenuToHTML('index');
+  renderMenuToHTML('index', 'lang');
   ?>
   <section class="corps">
     <?php
