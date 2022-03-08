@@ -37,6 +37,15 @@ img {
   width: 100%;
 }
 
+#currentpage {
+  border-bottom: 2px #fff solid;
+}
+
+.bottom {
+  height: 45px;
+  color: lightslategray;
+}
+
 .navbar {
   background-color: #047;
   color: #fff;
@@ -58,6 +67,10 @@ img {
 }
 
 .navbar .flex {
+  justify-content: space-between;
+}
+
+.bottom .flex {
   justify-content: space-between;
 }
 
