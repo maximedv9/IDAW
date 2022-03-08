@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html class="h-100">
-
-<head>
-  <title>Home | Portfolio</title>
-  <meta charset="utf-8" />
-  <link rel="stylesheet" href="css/style.css" />
-</head>
+<?php
+require_once('template_header.php');
+?>
 
 <body>
   <div class="navbar">
@@ -14,9 +9,9 @@
       <h2 class="logo">Maxime de Veyrac</h2>
       <nav>
         <ul>
-          <li><a id="currentpage" href="index.html">Home</a></li>
-          <li><a href="cv.html">CV</a></li>
-          <li><a href="projects.html">Projects</a></li>
+          <li><a id="currentpage" href="index.php">Home</a></li>
+          <li><a href="cv.php">CV</a></li>
+          <li><a href="projects.php">Projects</a></li>
         </ul>
       </nav>
     </div>
@@ -31,7 +26,7 @@
           consectetur quidem laborum corrupti mollitia beatae, sapiente vero!
           Voluptates dicta rerum aut!
         </p>
-        <a href="features.html">Read More</a>
+        <a href="features.php">Read More</a>
       </div>
     </div>
   </section>
@@ -43,5 +38,3 @@
     </div>
   </footer>
 </body>
-
-</html>
