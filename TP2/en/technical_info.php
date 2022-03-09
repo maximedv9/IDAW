@@ -1,8 +1,9 @@
 <body>
     <section class="showcase">
         <div class="container grid">
+            <a href="index.php?page=technical_info_fr&lang=fr">FR</a>
             <div class="card">
-                <h2>ITechnical Infos</h2>
+                <h2>Technical Infos</h2>
                 <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam
                     ducimus est recusandae nemo amet rerum nesciunt sit, illum

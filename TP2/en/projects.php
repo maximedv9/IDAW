@@ -1,6 +1,7 @@
 <body>
   <section class="showcase">
     <div class="container grid">
+      <a href="index.php?page=projects_fr&lang=fr">FR</a>
       <div class="card">
         <h2>Project 1</h2>
         <p>

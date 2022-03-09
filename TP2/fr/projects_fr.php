@@ -1,14 +1,7 @@
-<?php
-require_once('template_header.php');
-?>
-
 <body>
-  <?php
-  require_once('template_menu.php');
-  renderMenuToHTML('projects');
-  ?>
   <section class="showcase">
     <div class="container grid">
+      <a href="index.php?page=projects&lang=en">EN</a>
       <div class="card">
         <h2>Projet 1</h2>
         <p>
@@ -38,7 +31,4 @@ require_once('template_header.php');
       </div>
     </div>
   </section>
-  <?php
-  require_once('template_footer.php');
-  ?>
 </body>

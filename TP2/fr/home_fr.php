@@ -1,6 +1,7 @@
 <body>
     <section class="showcase">
         <div class="container grid">
+            <a href="index.php?page=home&lang=en">EN</a>
             <div class="card">
                 <h2>Acceuil</h2>
                 <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h1>

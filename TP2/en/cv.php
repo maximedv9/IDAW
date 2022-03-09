@@ -1,6 +1,7 @@
 <body>
   <section class="showcase">
     <div class="container">
+      <a href="index.php?page=cv_fr&lang=fr">FR</a>
       <div class="cvcard">
         <img src="photo_cv.jpg" style="width: 100px; height: 120px" />
         <h2>This is a CV</h2>

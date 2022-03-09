@@ -10,20 +10,22 @@ if (isset($_GET['page'])) {
 if (isset($_GET['lang'])) {
   $currentPageLang = $_GET['lang'];
 }
+
 ?>
 
 <body>
   <?php
   require_once('template_menu.php');
-  renderMenuToHTML('index', 'lang');
+  renderMenuToHTML('index', $currentPageLang);
   ?>
   <section class="corps">
     <?php
-    $pageToInclude = $currentPageId . ".php";
-    if (is_readable($pageToInclude))
+    $pageToInclude = $currentPageLang . "/" . $currentPageId . ".php";
+    if (is_readable($pageToInclude)) {
       require_once($pageToInclude);
-    else
+    } else {
       require_once("error.php");
+    }
     ?>
   </section>
   <?php
