@@ -2,6 +2,7 @@
     <section class="showcase">
         <div class="container grid">
             <a href="index.php?page=home&lang=en">EN</a>
+            <img src="united-kingdom-flag-icon-256.jpg" style="width: 16px; height: 12px" />
             <div class="card">
                 <h2>Acceuil</h2>
                 <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h1>

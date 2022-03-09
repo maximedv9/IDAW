@@ -2,6 +2,7 @@
   <section class="showcase">
     <div class="container">
       <a href="index.php?page=cv_fr&lang=fr">FR</a>
+      <img src="france-flag-icon-16.jpg" style="width: 16px; height: 12px" />
       <div class="cvcard">
         <img src="photo_cv.jpg" style="width: 100px; height: 120px" />
         <h2>This is a CV</h2>

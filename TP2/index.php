@@ -16,7 +16,7 @@ if (isset($_GET['lang'])) {
 <body>
   <?php
   require_once('template_menu.php');
-  renderMenuToHTML('index', $currentPageLang);
+  renderMenuToHTML($currentPageId, $currentPageLang);
   ?>
   <section class="corps">
     <?php

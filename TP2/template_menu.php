@@ -31,10 +31,10 @@ function renderMenuToHTML($currentPageId, $currentPageLang = 'en')
     <ul>';
 
     foreach ($mymenu as $pageId => $pageParameters) {
-        if ($pageId != $currentPageId) {
-            echo '<li><a href="index.php?page=', $pageId, '&lang=', $currentPageLang, '">', $pageParameters, '</a></li>';
-        } else {
+        if ($pageId == $currentPageId) {
             echo '<li><a id="currentpage" href="index.php?page=', $pageId, '&lang=', $currentPageLang, '">', $pageParameters, '</a></li>';
+        } else {
+            echo '<li><a href="index.php?page=', $pageId, '&lang=', $currentPageLang, '">', $pageParameters, '</a></li>';
         }
     }
 

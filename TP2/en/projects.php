@@ -2,6 +2,7 @@
   <section class="showcase">
     <div class="container grid">
       <a href="index.php?page=projects_fr&lang=fr">FR</a>
+      <img src="france-flag-icon-16.jpg" style="width: 16px; height: 12px" />
       <div class="card">
         <h2>Project 1</h2>
         <p>
