@@ -9,12 +9,32 @@
 <body>
 
     <?php
-    // on simule une base de données
-    $users = array(
-        // login => password
-        'riri' => 'fifi',
-        'yoda' => 'maitrejedi'
-    );
+    $host = 'localhost';
+    $dbname = 'TP3_IDAW';
+    $username = 'root';
+    $password = 'root';
+
+    $dsn = "mysql:host=$host;dbname=$dbname";
+
+    $sql = "SELECT * FROM user";
+
+    try {
+        $pdo = new PDO($dsn, $username, $password);
+        $stmt = $pdo->query($sql);
+
+        if ($stmt === false) {
+            die("Erreur");
+        }
+    } catch (PDOException $e) {
+        echo $e->getMessage();
+    }
+
+    $users = array();
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+
+        $users[$row['login']] = $row['password'];
+    }
+
     $login = "anonymous";
     $errorText = "";
     $successfullyLogged = false;

@@ -1,3 +1,33 @@
+<?php
+
+$host = 'localhost';
+$dbname = 'TP3_IDAW';
+$username = 'root';
+$password = 'root';
+
+$dsn = "mysql:host=$host;dbname=$dbname";
+
+if (isset($_POST['newLogin']) && isset($_POST['newPassword']) && isset($_POST['newPseudo'])) {
+
+
+    $newLogin = $_POST['newLogin'];
+    $newPassword = $_POST['newPassword'];
+    $newPseudo = $_POST['newPseudo'];
+
+    $sql = "INSERT INTO `user` (`id`, `login`, `password`, `pseudo`) VALUES (NULL, '$newLogin', '$newPassword', '$newPseudo');";
+    try {
+        $pdo = new PDO($dsn, $username, $password);
+        $stmt = $pdo->query($sql);
+
+        if ($stmt === false) {
+            die("Erreur");
+        }
+    } catch (PDOException $e) {
+        echo $e->getMessage();
+    }
+}
+
+?>
 <!DOCTYPE html>
 <html>
 

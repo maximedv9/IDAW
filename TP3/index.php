@@ -40,7 +40,7 @@ renderHeaderToHTML($currentStyle);
       </select>
       <input type="submit" value="OK" />
     </form>
-    <a href="login.php">Déconnexion</a>
+    <a href="disconnect.php">Déconnexion</a>
   </div>
   <?php
   $pageToInclude = $currentPageLang . "/" . $currentPageId . ".php";
