@@ -1,0 +1,47 @@
+* {
+  padding: 0;
+  margin: 0;
+  color: #1a1f36;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Ubuntu, sans-serif;
+}
+body {
+  padding: 10px;
+  margin: 10px;
+  margin-top: 2em;
+}
+
+.table {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: medium solid #6495ed;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  font-family: monospace;
+  border: thin solid #6495ed;
+  width: 17%;
+  padding: 5px;
+  background-color: #d0e3fa;
+  background-image: url(sky.jpg);
+}
+
+td {
+  font-family: sans-serif;
+  border: thin solid #6495ed;
+  width: 17%;
+  padding: 5px;
+  text-align: center;
+  background-color: #ffffff;
+}
+h1 {
+  letter-spacing: -1px;
+}
+a {
+  color: #5469d4;
+  text-decoration: unset;
+}
