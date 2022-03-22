@@ -51,7 +51,7 @@
         <div class="form-group" style="margin-top:10px">
             <span class="col-sm-2"></span>
             <div class="col-sm-2">
-                <button type="submit" class="btn btn-primary form-control" id="submit">Submit</button>
+                <button type="submit" class="btn btn-primary form-control" id="submit" value="Add">Submit</button>
             </div>
         </div>
     </form>
@@ -75,6 +75,10 @@
 
             $('#studentsTableBody').html(showStudents);
 
+        }
+
+        function traitement_callback(in_text) {
+            alert(in_text);
         }
 
         function addStudent() {
@@ -133,8 +137,15 @@
         function onFormSubmit() {
             // prevent the form to be sent to the server
             event.preventDefault();
-            addStudent();
-            displayStudents();
+            if ($('#submit').val() == 'Add') {
+                addStudent();
+                displayStudents();
+            } else {
+                addStudentInRow($('#submit').val());
+                displayStudents();
+            }
+            $('#submit').val('Add')
+
         }
 
         function deleteStudent(index) {
@@ -147,9 +158,7 @@
                 .val('')
                 .prop('checked', false);
 
-            $()
-            addStudentInRow(index);
-            students.splice(index + 1, 1);
+            $('#submit').val(index);
         }
     </script>
 </body>
