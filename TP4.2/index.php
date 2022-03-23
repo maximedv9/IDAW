@@ -56,6 +56,12 @@
         </div>
     </form>
     <script>
+        function trueToOui(studentAime) {
+            if (studentAime)
+                return "oui";
+            return "non";
+        }
+
         function onFormSubmit() {
             // prevent the form to be sent to the server
             event.preventDefault();

@@ -5,7 +5,12 @@ $dbname = 'TP4_IDAW';
 $username = 'root';
 $password = 'root';
 
-$dsn = "mysql:host=$host;dbname=$dbname";
+$connexion = new mysqli($host, $username, $password, $dbname);
+
+if ($connexion->connect_error) {
+    die('Erreur de connexion: ' . $connexion->connect_error);
+}
+
 
 if (isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['birthday']) && isset($_POST['avis']) && isset($_POST['remarques'])) {
 
@@ -13,11 +18,17 @@ if (isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['birthday'])
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
     $birthday = $_POST['birthday'];
-    $avis = $_POST['avis'];
+    if ($_POST['avis']) {
+        $avis = 'oui';
+    } else {
+        $avis = 'non';
+    }
     $remarques = $_POST['remarques'];
 
     $sql = "INSERT INTO `utilisateur` (`nom`, `prenom`, `birthday`, `avis`, `remarques`) VALUES ($nom, '$prenom', '$birthday', '$avis', '$remarques');";
-    try {
+    $result = $connexion->query($sql);
+
+    /*try {
         $pdo = new PDO($dsn, $username, $password);
         $stmt = $pdo->query($sql);
 
@@ -26,5 +37,5 @@ if (isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['birthday'])
         }
     } catch (PDOException $e) {
         echo $e->getMessage();
-    }
+    }*/
 }
