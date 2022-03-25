@@ -18,7 +18,7 @@ if (isset($_POST['newNom']) && isset($_POST['newPrenom']) && isset($_POST['newAg
     $newSexe = $_POST['newSexe'];
     $newSport = $_POST['newSport'];
 
-    $sql = "INSERT INTO `utilisateur` (`EMAIL`, `PASSWORD`, `TRANCHE_AGE`, `SEXE`, `NIV_PRATIQUE_SPORT`, `NOM`, `PRENOM`) VALUES ('$newEmail', '$newPassword', '$newAge', '$newSexe', '$newSport', '$newNom', '$newPrenom' );";
+    $sql = "INSERT INTO `utilisateur` (`EMAIL`, `PASSWORD`, `DATE_NAISSANCE`, `SEXE`, `NIV_PRATIQUE_SPORT`, `NOM`, `PRENOM`) VALUES ('$newEmail', '$newPassword', '$newAge', '$newSexe', '$newSport', '$newNom', '$newPrenom' );";
     try {
         $pdo = new PDO($dsn, $username, $password);
         $stmt = $pdo->query($sql);

@@ -30,8 +30,8 @@
                             <td><input type="password" name="newPassword"></td>
                         </tr>
                         <tr>
-                            <th>Tranche d'age :</th>
-                            <td><input type="text" name="newAge"></td>
+                            <th>Date de naissance :</th>
+                            <td><input type="date" name="newAge"></td>
                         </tr>
                         <tr>
                             <th>Sexe :</th>
