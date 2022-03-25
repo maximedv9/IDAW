@@ -1,32 +1,47 @@
+<!doctype html>
+<html lang="fr">
+
+
+
 <body>
     <section class="showcase">
         <div class="container grid">
-            <a href="index.php?page=home_fr&lang=fr">FR</a>
-            <img src="france-flag-icon-16.jpg" style="width: 16px; height: 12px" />
             <div class="card">
                 <h2>Test git</h2>
-                <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h1>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam
-                    ducimus est recusandae nemo amet rerum nesciunt sit, illum
-                    consectetur quidem laborum corrupti mollitia beatae, sapiente vero!
-                    Voluptates dicta rerum aut!
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus,
-                    sit numquam voluptatem voluptas laborum temporibus excepturi animi,
-                    perspiciatis sequi optio itaque quo hic asperiores et totam iure,
-                    porro dolore ipsa.
-                </p>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam
-                    ducimus est recusandae nemo amet rerum nesciunt sit, illum
-                    consectetur quidem laborum corrupti mollitia beatae, sapiente vero!
-                    Voluptates dicta rerum aut!
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus,
-                    sit numquam voluptatem voluptas laborum temporibus excepturi animi,
-                    perspiciatis sequi optio itaque quo hic asperiores et totam iure,
-                    porro dolore ipsa.
-                </p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                        <th scope="col">Aliment</th>
+                        <th scope="col">Quantité</th>
+                        <th scope="col">Date</th>
+                        </tr>
+                    </thead>
+        <tbody id="mealsTableBody">
+        </tbody>
+    </table>
             </div>
         </div>
     </section>
+    <script>
+        $.get('http://localhost:8888/IDAW-1/IMM/backend/consommer.php', function(data){
+                console.debug(data);
+                data = JSON.parse(data);
+                data.forEach(row =>{
+                    $("#mealsTableBody").append(`<tr><td>${row[0]}</td><td>${row[1]}</td><td>${row[2]}</td></tr>`)
+                });
+            })
+        
+        .done(function(data){
+            console.log("La requête a été un succès");
+        })
+        
+        .fail(function(){
+            console.log("La requête s'est terminée en échec")
+        })
+
+        .always(function(){
+            console.log("Requête effectuée");
+        })
+
+        </script>
 </body>
