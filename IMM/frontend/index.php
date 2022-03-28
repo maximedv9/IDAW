@@ -7,11 +7,11 @@ renderHeaderToHTML();
 
 <body>
     <?php
-    if(isset($_GET['page'])) {
+    if (isset($_GET['page'])) {
         $currentPageId = $_GET['page'];
     }
     require_once('template_menu.php');
-    renderMenuToHTML();
+    renderMenuToHTML($currentPageId);
     $pageToInclude = $currentPageId . ".php";
     if (is_readable($pageToInclude)) {
         require_once($pageToInclude);
