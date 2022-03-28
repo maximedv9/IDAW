@@ -10,7 +10,7 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     //Sélectionne toutes les valeurs dans la table consommer et les affiche
-    $sql = "SELECT aliment.LIB_ALIMENT FROM `aliment`";
+    $sql = "SELECT aliment.LIB_ALIMENT,consommer.QUANTITE,consommer.DATE FROM `consommer` JOIN `aliment` ON consommer.ID_ALIMENT=aliment.ID_ALIMENT";
     // $res['req']=$sql;
 
     $result = $conn->query($sql);
@@ -25,3 +25,4 @@ try {
 }
 
 ?>
+

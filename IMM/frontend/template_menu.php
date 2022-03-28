@@ -3,8 +3,11 @@ function renderMenuToHTML()
 {
         $mymenu = array(
             // idPage titre
-            'home' => 'Acceuil',
-            'liste_aliments' => 'Aliments',
+            'home' => 'Accueil',
+            'profile_page' => 'Profil',
+            'statistiques_page' => 'Statistiques',
+            'liste_aliments_page' => 'Aliments',
+            
             
         );
     

@@ -10,7 +10,7 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     //Sélectionne toutes les valeurs dans la table consommer et les affiche
-    $sql = "SELECT aliment.LIB_ALIMENT FROM `aliment`";
+    $sql = "SELECT NOM, PRENOM, EMAIL FROM `utilisateur`";
     // $res['req']=$sql;
 
     $result = $conn->query($sql);
