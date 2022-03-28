@@ -1,5 +1,5 @@
 <?php
-function renderMenuToHTML()
+function renderMenuToHTML($currentPageId)
 {
         $mymenu = array(
             // idPage titre
@@ -12,7 +12,7 @@ function renderMenuToHTML()
         );
     
 
-    echo '<div class="navbar"><div class="container flex"><h1 class="logo">Portfolio</h1><h2 class="logo">Maxime de Veyrac</h2>';
+    echo '<div class="navbar"><div class="container flex"><h1 class="logo">Portfolio</h1>';
 
     if (isset($_SESSION['login'])) {
 
