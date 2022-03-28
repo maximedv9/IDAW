@@ -7,7 +7,7 @@ renderHeaderToHTML();
 
 <body>
     <?php
-    if(isset($_GET['page'])) {
+    if (isset($_GET['page'])) {
         $currentPageId = $_GET['page'];
     }
     require_once('template_menu.php');
