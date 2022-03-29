@@ -10,7 +10,7 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     //Sélectionne toutes les valeurs dans la table consommer et les affiche
-    $sql = "SELECT NOM, PRENOM, EMAIL, FLOOR(DATEDIFF(DAY, utilisateur, @TargetDate) / 365.25) FROM `utilisateur`";
+    $sql = "SELECT NOM, PRENOM, EMAIL, SEXE, -(FLOOR(DATEDIFF(DATE_NAISSANCE, DATE( NOW() )) / 365.25)), NIV_PRATIQUE_SPORT, POIDS, TAILLE FROM `utilisateur` WHERE EMAIL='hugo.lim@etu.imt-lille-douai.fr'";
     // $res['req']=$sql;
 
     $result = $conn->query($sql);
@@ -23,3 +23,5 @@ try {
 } catch (PDOException $e) {
     echo "Erreur : " . $e->getMessage();
 }
+
+?>

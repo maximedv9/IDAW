@@ -11,19 +11,14 @@
                 <table class="table">
                     <thead>
                         <tr>
-<<<<<<< HEAD
                         <th scope="col">Nom</th>
                         <th scope="col">Prénom</th>
                         <th scope="col">Email</th>
                         <th scope="col">Sexe</th>
                         <th scope="col">Âge</th>
+                        <th scope="col">Niveau de pratique sportive</th>
                         <th scope="col">Poids</th>
                         <th scope="col">Taille</th>
-=======
-                            <th scope="col">Nom</th>
-                            <th scope="col">Prénom</th>
-                            <th scope="col">Email</th>
->>>>>>> 80fe8faadecf7caacc0f2cf0c5b98d004e106b31
                         </tr>
                     </thead>
                     <tbody id="profileTableBody">
@@ -33,13 +28,14 @@
         </div>
     </section>
     <script>
-        $.get('http://localhost:8888/IDAW-1/IMM/backend/user_profile.php', function(data) {
+        $.get('http://localhost:8888/IDAW-1/IMM/backend/user_profile.php',function(data){
                 console.debug(data);
                 data = JSON.parse(data);
                 data.forEach(row => {
-                    $("#profileTableBody").append(`<tr><td>${row[0]}</td><td>${row[1]}</td><td>${row[2]}</td></tr>`)
+                    $("#profileTableBody").append(`<tr><td>${row[0]}</td><td>${row[1]}</td><td>${row[2]}</td><td>${row[3]}</td><td>${row[4]} ans</td><td>${row[5]}</td><td>${row[6]} kg</td><td>${row[7]} cm</td></tr>`)
                 });
             })
+        
 
             .done(function(data) {
                 console.log("La requête a été un succès");
