@@ -10,7 +10,7 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     //Sélectionne toutes les valeurs dans la table consommer et les affiche
-    $sql = "SELECT NOM, PRENOM, EMAIL FROM `utilisateur`";
+    $sql = "SELECT NOM, PRENOM, EMAIL, FLOOR(DATEDIFF(DAY, utilisateur, @TargetDate) / 365.25) FROM `utilisateur`";
     // $res['req']=$sql;
 
     $result = $conn->query($sql);
