@@ -6,9 +6,7 @@ $dbname = 'iMM';
 
 //essaye de se connecter
 try {
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
+    $conn = new PDO("mysql:host=localhost;dbname=iMM;charset=utf8", "root", "root", array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
     //Sélectionne toutes les valeurs dans la table consommer et les affiche
     $sql = "SELECT aliment.LIB_ALIMENT FROM `aliment`";
     // $res['req']=$sql;
