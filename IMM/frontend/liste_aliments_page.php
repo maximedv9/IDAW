@@ -38,11 +38,9 @@
             .always(function() {
                 console.log("Requête effectuée");
             })
-    </script>
-</body>
-$(document).ready( function () {
-$('#alimentsTable').DataTable();
-} );
 
-</script>
+        $(document).ready( function () {
+            $('#alimentsTable').DataTable();
+        } );
+    </script>
 </body>
