@@ -6,9 +6,13 @@ function renderMenuToHTML($currentPageId)
         'home' => 'Accueil',
         'profile_page' => 'Profil',
         'statistiques_page' => 'Statistiques',
+<<<<<<< HEAD
         'liste_aliments_page' => 'Aliments',
 
 
+=======
+        'liste_aliments_page' => 'Aliments'
+>>>>>>> ced5c3fa788e00e5ef951c8e693b7c0a7fa67e61
     );
 
 

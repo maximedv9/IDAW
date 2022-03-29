@@ -1,14 +1,12 @@
 <!doctype html>
 <html lang="fr">
 
-
-
 <body>
     <section class="showcase">
         <div class="container grid">
             <div class="card">
-                <h2>Test git</h2>
-                <table class="table">
+                <h2>Table des aliments</h2>
+                <table id="alimentsTable" class="table">
                     <thead>
                         <tr>
                             <th scope="col">Aliment</th>
@@ -41,4 +39,10 @@
                 console.log("Requête effectuée");
             })
     </script>
+</body>
+$(document).ready( function () {
+$('#alimentsTable').DataTable();
+} );
+
+</script>
 </body>
