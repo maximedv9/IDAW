@@ -7,13 +7,17 @@
     <section class="showcase">
         <div class="container grid">
             <div class="card">
-                <h2>Test git</h2>
+                <h2>Profil de l'utilisateur</h2>
                 <table class="table">
                     <thead>
                         <tr>
                         <th scope="col">Nom</th>
                         <th scope="col">Prénom</th>
                         <th scope="col">Email</th>
+                        <th scope="col">Sexe</th>
+                        <th scope="col">Âge</th>
+                        <th scope="col">Poids</th>
+                        <th scope="col">Taille</th>
                         </tr>
                     </thead>
         <tbody id="profileTableBody">
