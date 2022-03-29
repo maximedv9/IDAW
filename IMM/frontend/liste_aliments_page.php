@@ -1,14 +1,12 @@
 <!doctype html>
 <html lang="fr">
 
-
-
 <body>
     <section class="showcase">
         <div class="container grid">
             <div class="card">
-                <h2>Test git</h2>
-                <table class="table">
+                <h2>Table des aliments</h2>
+                <table id="alimentsTable" class="table">
                     <thead>
                         <tr>
                         <th scope="col">Aliment</th>
@@ -21,6 +19,7 @@
         </div>
     </section>
     <script>
+        
         $.get('http://localhost:8888/IDAW-1/IMM/backend/aliments.php', function(data){
                 console.debug(data);
                 data = JSON.parse(data);
@@ -40,6 +39,10 @@
         .always(function(){
             console.log("Requête effectuée");
         })
+
+        $(document).ready( function () {
+            $('#alimentsTable').DataTable();
+        } );
 
         </script>
 </body>
