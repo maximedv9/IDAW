@@ -19,28 +19,28 @@
         </div>
     </section>
     <script>
-        $.get('http://localhost:8888/IDAW-1/IMM/backend/aliments.php', function(data) {
-                console.debug(data);
-                data = JSON.parse(data);
-                data.forEach(row => {
-                    $("#alimentsTableBody").append(`<tr><td>${row[0]}</td></tr>`)
-                });
-            })
+        $(document).ready(function() {
+            $.get('http://localhost:8888/IDAW-1/IMM/backend/aliments.php', function(data) {
+                    console.debug(data);
+                    data = JSON.parse(data);
+                    data.forEach(row => {
+                        $("#alimentsTableBody").append(`<tr><td>${row[0]}</td></tr>`)
+                    });
+                })
 
-            .done(function(data) {
-                console.log("La requête a été un succès");
-            })
+                .done(function(data) {
+                    console.log("La requête a été un succès");
+                })
 
-            .fail(function() {
-                console.log("La requête s'est terminée en échec")
-            })
+                .fail(function() {
+                    console.log("La requête s'est terminée en échec")
+                })
 
-            .always(function() {
-                console.log("Requête effectuée");
-            })
+                .always(function() {
+                    console.log("Requête effectuée");
+                })
 
-        $(document).ready( function () {
             $('#alimentsTable').DataTable();
-        } );
+        });
     </script>
 </body>
