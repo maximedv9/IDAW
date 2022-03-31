@@ -17,6 +17,7 @@ try {
 
     if (!$getAll)
         $getAll['status'] = 'Fail';
+
 } catch (PDOException $e) {
     echo "Erreur : " . $e->getMessage();
 }
