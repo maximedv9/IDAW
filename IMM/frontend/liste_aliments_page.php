@@ -6,45 +6,48 @@
         <div class="container grid">
             <form id="addMealForm" action="" onsubmit="onFormSubmit();">
 
-                <p id="food-name"></p>
 
-                <div class="form-group row">
-                    <label for="inputQte" class="col-sm-2 col-form-label">Quantité</label>
-                    <div class="col-sm-3">
-                        <input type="text" class="form-control" id="inputQte">
+
+                <div class="card">
+                    <p id="food-name"></p>
+                    <div class="form-group row">
+                        <label for="inputQte" class="col-sm-2 col-form-label">Quantité</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" id="inputQte">
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group row">
-                    <label for="inputDate" class="col-sm-2 col-form-label">Date</label>
-                    <div class="col-sm-3">
-                        <input type="datetime-local" class="form-control" id="inputDate">
+                    <div class="form-group row">
+                        <label for="inputDate" class="col-sm-2 col-form-label">Date</label>
+                        <div class="col-sm-3">
+                            <input type="datetime-local" class="form-control" id="inputDate">
+                        </div>
                     </div>
-                </div>
 
-                <br>
+                    <br>
 
-                <div class="form-group row">
-                    <span class="col-sm-2"></span>
-                    <div class="col-sm-2">
-                        <button type="submit" class="btn btn-primary form-control">Submit</button>
+                    <div class="form-group row">
+                        <span class="col-sm-2"></span>
+                        <div class="col-sm-2">
+                            <button type="submit" class="btn btn-primary form-control" onclick="hideMeal()">Ajouter</button>
+                        </div>
                     </div>
-                </div>
 
             </form>
-            <div class="card">
-                <h2>Table des aliments</h2>
-                <table id="alimentsTable" class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Aliment</th>
-                            <th scope="col">Ajouter</th>
-                        </tr>
-                    </thead>
-                    <tbody id="alimentsTableBody">
-                    </tbody>
-                </table>
-            </div>
+        </div>
+        <div class="card">
+            <h2>Table des aliments</h2>
+            <table id="alimentsTable" class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Aliment</th>
+                        <th scope="col">Ajouter</th>
+                    </tr>
+                </thead>
+                <tbody id="alimentsTableBody">
+                </tbody>
+            </table>
+        </div>
         </div>
 
     </section>
@@ -87,7 +90,6 @@
 
             //Il faut que la date et la quantité soit non vide pour que l'on puisse ajouter un aliment
             let data = {
-                email: 'hugo.lim@etu.imt-lille-douai.fr',
                 qte: qte,
                 date: date,
                 foodname: document.getElementById("food-name").innerHTML
@@ -111,6 +113,7 @@
 
         //Permet d'afficher le formulaire d'ajout d'aliment une fois que l'on a appuyé sur le bouton ajouter
         function addMeal(index) {
+            document.getElementById("addMealForm").reset();
             var food_name = document.getElementById(index).innerHTML;
             console.log(index);
             var x = document.getElementById("addMealForm");
@@ -119,6 +122,11 @@
             $('html, body').animate({
                 scrollTop: 0
             }, 'fast');
+        }
+
+        function hideMeal() {
+            var x = document.getElementById("addMealForm");
+            x.style.display = "none";
         }
     </script>
 </body>
