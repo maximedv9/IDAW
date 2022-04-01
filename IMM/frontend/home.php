@@ -78,7 +78,7 @@
                 <div id="chartdiv"></div>
             </div>
             <div class="card">
-                <h2>Test git</h2>
+                <h2>Historique des aliments consommés</h2>
                 <table class="table">
                     <thead>
                         <tr>
@@ -90,8 +90,6 @@
                     <tbody id="mealsTableBody">
                     </tbody>
                 </table>
-            </div>
-        </div>
     </section>
     <script>
         $.get('http://localhost/IDAW/IMM/backend/consommer.php', function(data) {
