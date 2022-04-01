@@ -119,8 +119,14 @@ img {
   padding: 20px;
 }
 
-#chartdiv {
-  width: 100%;
+.cardchart {
+  display: flex;
   height: 500px;
-  max-width: 100%;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 30px;
+  margin: 20px;
+  padding: 20px;
 }
+
+

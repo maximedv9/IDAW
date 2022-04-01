@@ -1,136 +1,80 @@
-<head>
-    <!-- Resources -->
-    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
-    
+<!-- Styles -->
+<style>
+    #chartdiv {
+        width: 100%;
+        height: 100%;
+    }
+</style>
 
-    <!-- Chart code -->
-    <script>
-        am5.ready(function() {
+<!-- Resources -->
+<script src="http://localhost/IDAW/IMM/frontend/libraries/core.js"></script>
+<script src="http://localhost/IDAW/IMM/frontend/libraries/charts.js"></script>
+<script src="http://localhost/IDAW/IMM/frontend/libraries/animated.js"></script>
 
-            // Create root element
-            // https://www.amcharts.com/docs/v5/getting-started/#Root_element
-            var root = am5.Root.new("chartdiv");
+<!-- Chart code -->
+<script>
+    am4core.ready(function() {
 
+        // Themes begin
+        am4core.useTheme(am4themes_animated);
+        // Themes end
 
-            // Set themes
-            // https://www.amcharts.com/docs/v5/concepts/themes/
-            root.setThemes([
-                am5themes_Animated.new(root)
-            ]);
+        var chart = am4core.create("chartdiv", am4charts.PieChart3D);
+        chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
 
+        chart.legend = new am4charts.Legend();
 
-            // Create chart
-            // https://www.amcharts.com/docs/v5/charts/xy-chart/
-            var chart = root.container.children.push(am5xy.XYChart.new(root, {
-                panX: true,
-                panY: true,
-                wheelX: "panX",
-                wheelY: "zoomX",
-                pinchZoomX: true
-            }));
-
-
-            // Add cursor
-            // https://www.amcharts.com/docs/v5/charts/xy-chart/cursor/
-            var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {
-                behavior: "none"
-            }));
-            cursor.lineY.set("visible", false);
-
-
-            // Generate random data
-            var date = new Date();
-            date.setHours(0, 0, 0, 0);
-            var value = 100;
-
-            function generateData() {
-                value = Math.round((Math.random() * 10 - 5) + value);
-                am5.time.add(date, "day", 1);
-                return {
-                    date: date.getTime(),
-                    value: value
-                };
+        chart.data = [{
+                country: "Lithuania",
+                litres: 501.9
+            },
+            {
+                country: "Czech Republic",
+                litres: 301.9
+            },
+            {
+                country: "Ireland",
+                litres: 201.1
+            },
+            {
+                country: "Germany",
+                litres: 165.8
+            },
+            {
+                country: "Australia",
+                litres: 139.9
+            },
+            {
+                country: "Austria",
+                litres: 128.3
+            },
+            {
+                country: "UK",
+                litres: 99
+            },
+            {
+                country: "Belgium",
+                litres: 60
+            },
+            {
+                country: "The Netherlands",
+                litres: 50
             }
+        ];
 
-            function generateDatas(count) {
-                var data_chart = [];
-                $.get('http://localhost:8888/IDAW-1/IMM/backend/consommer.php', function(data){
-                    console.debug(data);
-                    data = JSON.parse(data);
-                    data.forEach(row =>{
-                        date = new Date(row[2]);
-                        row_data = {date: date.getTime(),
-                        value: parseInt(row[1])};
-                        data_chart.push(row_data)
-                    });
-                })/*
-                for (var i = 0; i < count; ++i) {
-                    data_chart.push(generateData());
-                }*/
-                return data_chart;
-            }
+        chart.innerRadius = 100;
 
+        var series = chart.series.push(new am4charts.PieSeries3D());
+        series.dataFields.value = "litres";
+        series.dataFields.category = "country";
 
-            // Create axes
-            // https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
-            var xAxis = chart.xAxes.push(am5xy.DateAxis.new(root, {
-                maxDeviation: 0.2,
-                baseInterval: {
-                    timeUnit: "day",
-                    count: 1
-                },
-                renderer: am5xy.AxisRendererX.new(root, {}),
-                tooltip: am5.Tooltip.new(root, {})
-            }));
-
-            var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
-                renderer: am5xy.AxisRendererY.new(root, {})
-            }));
-
-
-            // Add series
-            // https://www.amcharts.com/docs/v5/charts/xy-chart/series/
-            var series = chart.series.push(am5xy.LineSeries.new(root, {
-                name: "Series",
-                xAxis: xAxis,
-                yAxis: yAxis,
-                valueYField: "value",
-                valueXField: "date",
-                tooltip: am5.Tooltip.new(root, {
-                    labelText: "{valueY}"
-                })
-            }));
-
-
-            // Add scrollbar
-            // https://www.amcharts.com/docs/v5/charts/xy-chart/scrollbars/
-            chart.set("scrollbarX", am5.Scrollbar.new(root, {
-                orientation: "horizontal"
-            }));
-
-
-            // Set data
-            var data = generateDatas(1200);
-            console.log(data);
-            series.data.setAll(data);
-            console.log(data);
-
-
-            // Make stuff animate on load
-            // https://www.amcharts.com/docs/v5/concepts/animations/
-            series.appear(1000);
-            chart.appear(1000, 100);
-
-        }); // end am5.ready()
-    </script>
-</head>
+    }); // end am4core.ready()
+</script>
 
 <body>
     <section class="showcase">
         <div class="container grid">
-            <div class="card">
+            <div class="cardchart">
                 <div id="chartdiv"></div>
             </div>
             <div class="card">
@@ -148,7 +92,7 @@
                 </table>
     </section>
     <script>
-        $.get('http://localhost:8888/IDAW-1/IMM/backend/consommer.php', function(data) {
+        $.get('http://localhost/IDAW/IMM/backend/consommer.php', function(data) {
                 console.debug(data);
                 data = JSON.parse(data);
                 data.forEach(row => {
@@ -167,5 +111,5 @@
             .always(function() {
                 console.log("Requête effectuée");
             })
-    </script>                                          
+    </script>
 </body>

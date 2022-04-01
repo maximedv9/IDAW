@@ -49,6 +49,16 @@
 
     </section>
     <script>
+<<<<<<< HEAD
+        $(document).ready(function() {
+            $.get('http://localhost/IDAW/IMM/backend/aliments.php', function(data) {
+                    console.debug(data);
+                    data = JSON.parse(data);
+                    data.forEach(row => {
+                        $("#alimentsTableBody").append(`<tr><td>${row[0]}</td></tr>`)
+                    });
+                })
+=======
         // cacher le formulaire d'ajout d'aliment lorsque l'on arrive sur la page
         document.getElementById("addMealForm").style.display = 'none';
 
@@ -61,6 +71,7 @@
                     id_row++;
                 });
             })
+>>>>>>> 555f294809dc45b3d22eeccb563a1c7c93189ed1
 
                 .done(function(data) {
                     console.log("La requête a été un succès");
