@@ -62,13 +62,13 @@
                 });
             })
 
-            .done(function(data) {
-                console.log("La requête a été un succès");
-            })
+                .done(function(data) {
+                    console.log("La requête a été un succès");
+                })
 
-            .fail(function() {
-                console.log("La requête s'est terminée en échec")
-            })
+                .fail(function() {
+                    console.log("La requête s'est terminée en échec")
+                })
 
             .always(function() {
                 console.log("Requête effectuée");

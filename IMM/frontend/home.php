@@ -112,7 +112,7 @@
 
 
             // Set data
-            var data = generateDatas(20);
+            var data = generateDatas(1200);
             console.log(data);
             series.data.setAll(data);
             console.log(data);
