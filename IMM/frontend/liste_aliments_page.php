@@ -6,8 +6,10 @@
         <div class="container grid">
         <form id="addMealForm" action="" onsubmit="onFormSubmit();">
 
-        <p id="food-name"></p>
+        
 
+        <div class="card">
+        <p id="food-name"></p>
         <div class="form-group row">
             <label for="inputQte" class="col-sm-2 col-form-label">Quantité</label>
             <div class="col-sm-3">
@@ -27,11 +29,12 @@
         <div class="form-group row">
             <span class="col-sm-2"></span>
             <div class="col-sm-2">
-                <button type="submit" class="btn btn-primary form-control">Submit</button>
+                <button type="submit" class="btn btn-primary form-control" onclick="hideMeal()">Ajouter</button>
             </div>
         </div>
 
     </form>
+</div>
             <div class="card">
                 <h2>Table des aliments</h2>
                 <table id="alimentsTable" class="table">
@@ -49,16 +52,6 @@
 
     </section>
     <script>
-<<<<<<< HEAD
-        $(document).ready(function() {
-            $.get('http://localhost/IDAW/IMM/backend/aliments.php', function(data) {
-                    console.debug(data);
-                    data = JSON.parse(data);
-                    data.forEach(row => {
-                        $("#alimentsTableBody").append(`<tr><td>${row[0]}</td></tr>`)
-                    });
-                })
-=======
         // cacher le formulaire d'ajout d'aliment lorsque l'on arrive sur la page
         document.getElementById("addMealForm").style.display = 'none';
 
@@ -71,7 +64,6 @@
                     id_row++;
                 });
             })
->>>>>>> 555f294809dc45b3d22eeccb563a1c7c93189ed1
 
                 .done(function(data) {
                     console.log("La requête a été un succès");
@@ -121,12 +113,18 @@
 
         //Permet d'afficher le formulaire d'ajout d'aliment une fois que l'on a appuyé sur le bouton ajouter
         function addMeal(index){
+            document.getElementById("addMealForm").reset();
             var food_name = document.getElementById(index).innerHTML;
             console.log(index);
             var x = document.getElementById("addMealForm");
             document.getElementById("food-name").innerHTML = food_name;
             x.style.display = "block";
             $('html, body').animate({ scrollTop: 0 }, 'fast');
+        }
+
+        function hideMeal(){
+            var x = document.getElementById("addMealForm");
+            x.style.display = "none";
         }
 
     </script>
