@@ -20,7 +20,7 @@
     </section>
     <script>
         $(document).ready(function() {
-            $.get('http://localhost:8888/IDAW-1/IMM/backend/aliments.php', function(data) {
+            $.get('http://localhost/IDAW/IMM/backend/aliments.php', function(data) {
                     console.debug(data);
                     data = JSON.parse(data);
                     data.forEach(row => {
