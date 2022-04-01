@@ -87,7 +87,6 @@
 
         //Il faut que la date et la quantité soit non vide pour que l'on puisse ajouter un aliment
             let data = {
-                email: 'hugo.lim@etu.imt-lille-douai.fr',
                 qte: qte,
                 date: date,
                 foodname: document.getElementById("food-name").innerHTML
