@@ -3,6 +3,7 @@
     <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    
 
     <!-- Chart code -->
     <script>
@@ -55,7 +56,7 @@
 
             function generateDatas(count) {
                 var data_chart = [];
-                /*$.get('http://localhost:8888/IDAW-1/IMM/backend/consommer.php', function(data){
+                $.get('http://localhost:8888/IDAW-1/IMM/backend/consommer.php', function(data){
                     console.debug(data);
                     data = JSON.parse(data);
                     data.forEach(row =>{
@@ -64,10 +65,10 @@
                         value: parseInt(row[1])};
                         data_chart.push(row_data)
                     });
-                })*/
+                })/*
                 for (var i = 0; i < count; ++i) {
                     data_chart.push(generateData());
-                }
+                }*/
                 return data_chart;
             }
 
@@ -133,7 +134,7 @@
                 <div id="chartdiv"></div>
             </div>
             <div class="card">
-                <h2>Test git</h2>
+                <h2>Historique des aliments consommés</h2>
                 <table class="table">
                     <thead>
                         <tr>
@@ -145,8 +146,6 @@
                     <tbody id="mealsTableBody">
                     </tbody>
                 </table>
-            </div>
-        </div>
     </section>
     <script>
         $.get('http://localhost:8888/IDAW-1/IMM/backend/consommer.php', function(data) {
@@ -168,5 +167,5 @@
             .always(function() {
                 console.log("Requête effectuée");
             })
-    </script>
+    </script>                                          
 </body>
