@@ -56,5 +56,5 @@
         $_SESSION['login'] = $login;
         echo '<div class="container">';
         echo "<h1>Bienvenu " . $_SESSION['login'] . "</h1>";
-        echo '<a href="index.php?page=home">Acceuil</a></div></body></html>';
+        echo '<a href="index.php?page=home">Cliquez ici pour aller à l\'acceuil</a></div></body></html>';
     }
