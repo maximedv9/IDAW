@@ -2,15 +2,15 @@
 
 Bienvenue sur la page Git dédiée au projet iMM de l'UV IDAW (P6) du groupe composé de Maxime DE VEYRAC et Hugo LIM, tous les deux en FISE 2023.
 
-Le projet doit être placé dans un dossier IMM lui même contenu dans un dossier IDAW (pour que les liens restent les mêmes)
+Le projet doit être placé dans un dossier IMM lui-même contenu dans un dossier IDAW (pour que les liens restent les mêmes)
 
 ## Début
 
-Pour commencer, rendez-vous à l'adresse "http://localhost/IDAW/IMM/frontend/inscription.php", et inscrivez votre profil. Celui-ci sera ajouté à la bdd. Vous serez en suite redirigé vers une page 'login.php', où vous devrez rentrer votre adresse mail de compte et votre mot de passe. Si ils sont correct, vous serez redirigez vers une page 'connected.php' où vous n'aurez plus qu'à cliquer sur le lien 'Cliquez ici pour aller à l'acceuil' qui vous redirigera vers la page d'acceuil, avec vos informations de connection stoquées dans une session. Néanmoins, les informations affichées sur l'applications seront toujours celles du comte 'hugo.lim@etu.imt-lille-douai.fr' (mot de passe: laisser une chaine vide) à cause de difficultés rencontrées dans la gestion de multiples comptes.
+Pour commencer, rendez-vous à l'adresse "http://localhost/IDAW/IMM/frontend/inscription.php", et inscrivez votre profil. Celui-ci sera ajouté à la bdd. Vous serez ensuite redirigé vers une page 'login.php', où vous devrez rentrer votre adresse mail de compte et votre mot de passe. Si ils sont corrects, vous serez redirigé vers une page 'connected.php' où vous n'aurez plus qu'à cliquer sur le lien 'Cliquez ici pour aller à l'acceuil' qui vous redirigera vers la page d'accueil, avec vos informations de connexion stockées dans une session. Néanmoins, les informations affichées sur l'application seront toujours celles du compte 'hugo.lim@etu.imt-lille-douai.fr' (mot de passe: laisser une chaine vide) à cause de difficultés rencontrées dans la gestion de multiples comptes.
 
 ## Accueil
 
-Page d'accueil avec un graphique réalisé avec amCharts ainsi que l'historique des repas pris et les nutriments apportés. Nous avons du inscrire les données du graphique en dur à cause d'un problème: En essayant de récupérer les données de la base de donnée grâce au tableau des nutriments affiché juste en dessous du graphique (les données du tableau sont celles que l'on utilise pour le graphique, et le tableau est bien chargé par une requête ajax à nutriments.php qui envoie des données de la bdd) à l'aide de getElementById, nous nous somme rendu compte que le HTML du tableau chargeait après le graphe, et que nous ne pouvions donc pas récupérer ses données pour le graphe. Nous n'avons pas réussi à résoudre ce problème.
+Page d'accueil avec un graphique réalisé avec amCharts ainsi que l'historique des repas pris et les nutriments apportés. Nous avons du inscrire les données du graphique en dur à cause d'un problème: En essayant de récupérer les données de la base de donnée grâce au tableau des nutriments affiché juste en dessous du graphique (les données du tableau sont celles que l'on utilise pour le graphique, et le tableau est bien chargé par une requête ajax à nutriments.php qui envoie des données de la bdd) à l'aide de getElementById, nous nous sommes rendu compte que le HTML du tableau chargeait après le graphe, et que nous ne pouvions donc pas récupérer ses données pour le graphe. Nous n'avons pas réussi à résoudre ce problème.
 
 ## Profil
 
