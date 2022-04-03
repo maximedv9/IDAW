@@ -28,7 +28,7 @@
         </div>
     </section>
     <script>
-        $.get('http://localhost:8888/IDAW-1/IMM/backend/user_profile.php', function(data) {
+        $.get('http://localhost/IDAW/IMM/backend/user_profile.php', function(data) {
                 console.debug(data);
                 data = JSON.parse(data);
                 data.forEach(row => {

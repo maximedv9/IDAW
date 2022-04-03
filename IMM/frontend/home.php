@@ -7,60 +7,11 @@
 </style>
 
 <!-- Resources -->
-<script src="http://localhost:8888/IDAW-1/IMM/frontend/libraries/core.js"></script>
-<script src="http://localhost:8888/IDAW-1/IMM/frontend/libraries/charts.js"></script>
-<script src="http://localhost:8888/IDAW-1/IMM/frontend/libraries/animated.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="http://localhost/IDAW/IMM/frontend/libraries/core.js"></script>
+<script src="http://localhost/IDAW/IMM/frontend/libraries/charts.js"></script>
+<script src="http://localhost/IDAW/IMM/frontend/libraries/animated.js"></script>
 
-<!-- Chart code -->
-<script>
-    am4core.ready(function() {
-
-        // Themes begin
-        am4core.useTheme(am4themes_animated);
-        // Themes end
-
-        var chart = am4core.create("chartdiv", am4charts.PieChart3D);
-        chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
-
-        chart.legend = new am4charts.Legend();
-
-        val1 = {
-            Nutriments: document.getElementById("name0").innerHTML,
-            Quantité: document.getElementById("qte0").innerHTML,
-
-        }
-        val2 = {
-            Nutriments: document.getElementById("name1").innerHTML,
-            Quantité: document.getElementById("qte1").innerHTML,
-
-        }
-        val3 = {
-            Nutriments: document.getElementById("name2").innerHTML,
-            Quantité: document.getElementById("qte2").innerHTML,
-
-        }
-        val4 = {
-            Nutriments: document.getElementById("name3").innerHTML,
-            Quantité: document.getElementById("qte3").innerHTML,
-
-        }
-
-        chart.data = [];
-        chart.data.push(val1);
-        chart.data.push(val2);
-        chart.data.push(val3);
-        chart.data.push(val4);
-
-        console.log(chart.data);
-
-        chart.innerRadius = 100;
-
-        var series = chart.series.push(new am4charts.PieSeries3D());
-        series.dataFields.value = "litres";
-        series.dataFields.category = "country";
-
-    }); // end am4core.ready()
-</script>
 
 <body>
     <section class="showcase">
@@ -96,7 +47,7 @@
                 </table>
     </section>
     <script>
-        $.get('http://localhost:8888/IDAW-1/IMM/backend/consommer.php', function(data) {
+        $.get('http://localhost/IDAW/IMM/backend/consommer.php', function(data) {
                 console.debug(data);
                 data = JSON.parse(data);
                 data.forEach(row => {
@@ -116,7 +67,7 @@
                 console.log("Requête effectuée");
             })
 
-        $.get('http://localhost:8888/IDAW-1/IMM/backend/nutriments.php', function(data) {
+        $.get('http://localhost/IDAW/IMM/backend/nutriments.php', function(data) {
                 console.debug(data);
                 data = JSON.parse(data);
                 var i = 0;
@@ -137,5 +88,103 @@
             .always(function() {
                 console.log("Requête effectuée");
             })
+        //Chart code 
     </script>
 </body>
+<script>
+    am4core.ready(function() {
+
+        // Themes begin
+        am4core.useTheme(am4themes_animated);
+        // Themes end
+
+        var chart = am4core.create("chartdiv", am4charts.PieChart3D);
+        chart.dataSource.url = "http://localhost/IDAW/IMM/backend/nutriments.php";
+        chart.dataSource.parser = new am4core.JSONParser();
+        chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+
+        chart.legend = new am4charts.Legend();
+
+        // chart.data = [{
+        //         country: "Lithuania",
+        //         litres: 501.9
+        //     },
+        //     {
+        //         country: "Czech Republic",
+        //         litres: 301.9
+        //     },
+        //     {
+        //         country: "Ireland",
+        //         litres: 201.1
+        //     },
+        //     {
+        //         country: "Germany",
+        //         litres: 165.8
+        //     },
+        //     {
+        //         country: "Australia",
+        //         litres: 139.9
+        //     },
+        //     {
+        //         country: "Austria",
+        //         litres: 128.3
+        //     },
+        //     {
+        //         country: "UK",
+        //         litres: 99
+        //     },
+        //     {
+        //         country: "Belgium",
+        //         litres: 60
+        //     },
+        //     {
+        //         country: "The Netherlands",
+        //         litres: 50
+        //     }
+        // ];
+
+        // $("#name0").html();
+
+
+        // console.log(document.getElementById('nutrimentsTable ').innerHTML());
+
+        // val1 = {
+        //     Nutriments: document.getElementById("name0").innerHTML,
+        //     Quantité: document.getElementById("qte0").innerHTML,
+
+        // }
+        // val2 = {
+        //     Nutriments: document.getElementById("name1").innerHTML,
+        //     Quantité: document.getElementById("qte1").innerHTML,
+
+        // }
+        // val3 = {
+        //     Nutriments: document.getElementById("name2").innerHTML,
+        //     Quantité: document.getElementById("qte2").innerHTML,
+
+        // }
+        // val4 = {
+        //     Nutriments: document.getElementById("name3").innerHTML,
+        //     Quantité: document.getElementById("qte3").innerHTML,
+
+        // }
+
+
+
+
+        // chart.data = [];
+        // chart.data.push(val1);
+        // chart.data.push(val2);
+        // chart.data.push(val3);
+        // chart.data.push(val4);
+
+        // console.log(chart.data);
+
+        chart.innerRadius = 100;
+
+        var series = chart.series.push(new am4charts.PieSeries3D());
+        series.dataFields.value = "litres";
+        series.dataFields.category = "country";
+
+    }); // end am4core.ready()
+</script>
