@@ -7,9 +7,9 @@
 </style>
 
 <!-- Resources -->
-<script src="http://localhost/IDAW/IMM/frontend/libraries/core.js"></script>
-<script src="http://localhost/IDAW/IMM/frontend/libraries/charts.js"></script>
-<script src="http://localhost/IDAW/IMM/frontend/libraries/animated.js"></script>
+<script src="http://localhost:8888/IDAW-1/IMM/frontend/libraries/core.js"></script>
+<script src="http://localhost:8888/IDAW-1/IMM/frontend/libraries/charts.js"></script>
+<script src="http://localhost:8888/IDAW-1/IMM/frontend/libraries/animated.js"></script>
 
 <!-- Chart code -->
 <script>
@@ -96,7 +96,7 @@
                 </table>
     </section>
     <script>
-        $.get('http://localhost/IDAW/IMM/backend/consommer.php', function(data) {
+        $.get('http://localhost:8888/IDAW-1/IMM/backend/consommer.php', function(data) {
                 console.debug(data);
                 data = JSON.parse(data);
                 data.forEach(row => {
@@ -116,7 +116,7 @@
                 console.log("Requête effectuée");
             })
 
-        $.get('http://localhost/IDAW/IMM/backend/nutriments.php', function(data) {
+        $.get('http://localhost:8888/IDAW-1/IMM/backend/nutriments.php', function(data) {
                 console.debug(data);
                 data = JSON.parse(data);
                 var i = 0;
