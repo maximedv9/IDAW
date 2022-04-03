@@ -55,7 +55,7 @@
         // cacher le formulaire d'ajout d'aliment lorsque l'on arrive sur la page
         document.getElementById("addMealForm").style.display = 'none';
 
-        $.get('http://localhost/IDAW/IMM/backend/aliments.php', function(data) {
+        $.get('http://localhost:8888/IDAW-1/IMM/backend/aliments.php', function(data) {
                 console.debug(data);
                 data = JSON.parse(data);
                 let id_row = 0;
@@ -98,7 +98,7 @@
             console.log(data);
 
             //post des données dans la database
-            $.post("http://localhost/IDAW/IMM/backend/add_consommer.php", data, "json")
+            $.post("http://localhost:8888/IDAW-1/IMM/backend/add_consommer.php", data, "json")
 
                 .done(function(data) {
                     console.log("La requête a été un succès");
