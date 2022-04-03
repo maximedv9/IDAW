@@ -8,9 +8,9 @@
 
 <!-- Resources -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="http://localhost/IDAW/IMM/frontend/libraries/core.js"></script>
-<script src="http://localhost/IDAW/IMM/frontend/libraries/charts.js"></script>
-<script src="http://localhost/IDAW/IMM/frontend/libraries/animated.js"></script>
+<script src="http://localhost:8888/IDAW-1/IMM/frontend/libraries/core.js"></script>
+<script src="http://localhost:8888/IDAW-1/IMM/frontend/libraries/charts.js"></script>
+<script src="http://localhost:8888/IDAW-1/IMM/frontend/libraries/animated.js"></script>
 
 
 <body>
@@ -52,7 +52,7 @@
             </div>
     </section>
     <script>
-        $.get('http://localhost/IDAW/IMM/backend/consommer.php', function(data) {
+        $.get('http://localhost:8888/IDAW-1/IMM/backend/consommer.php', function(data) {
                 console.debug(data);
                 data = JSON.parse(data);
                 data.forEach(row => {
@@ -72,7 +72,7 @@
                 console.log("Requête effectuée");
             })
 
-        $.get('http://localhost/IDAW/IMM/backend/nutriments.php', function(data) {
+        $.get('http://localhost:8888/IDAW-1/IMM/backend/nutriments.php', function(data) {
                 console.debug(data);
                 data = JSON.parse(data);
                 var i = 0;
@@ -104,7 +104,7 @@
         // Themes end
 
         var chart = am4core.create("chartdiv", am4charts.PieChart3D);
-        chart.dataSource.url = "http://localhost/IDAW/IMM/backend/nutriments.php";
+        chart.dataSource.url = "http://localhost:8888/IDAW-1/IMM/backend/nutriments.php";
         chart.dataSource.parser = new am4core.JSONParser();
         chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
 
