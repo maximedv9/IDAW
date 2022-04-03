@@ -50,8 +50,8 @@ img {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #047;
-  color: #fff;
+  background-color: #A2EDC9;
+  color: #333;
   height: 70px;
 }
 
@@ -60,7 +60,7 @@ img {
 }
 
 .navbar a {
-  color: #fff;
+  color: #333;
   padding: 10px;
   margin: 0 5px;
 }
@@ -82,7 +82,7 @@ img {
   padding: 20px;
   height: 100%;
   min-height: 500px;
-  background-color: rgb(179, 211, 235);
+  background-color: #DCF6F0;
 }
 
 .container {

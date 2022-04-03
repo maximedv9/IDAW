@@ -10,7 +10,7 @@ function renderMenuToHTML($currentPageId)
     );
 
 
-    echo '<div class="navbar"><div class="container flex"><h1 class="logo">Portfolio</h1>';
+    echo '<div class="navbar"><div class="container flex"><h1 class="logo">iMM App</h1>';
 
     if (isset($_SESSION['login'])) {
 
