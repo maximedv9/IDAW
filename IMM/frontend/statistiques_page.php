@@ -23,7 +23,7 @@
         </div>
     </section>
     <script>
-        $.get('http://localhost:8888/IDAW-1/IMM/backend/statistiques.php', function(data) {
+        $.get('http://localhost/IDAW/IMM/backend/statistiques.php', function(data) {
                 console.debug(data);
                 data = JSON.parse(data);
                 data.forEach(row => {
