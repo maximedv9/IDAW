@@ -1,8 +1,3 @@
-<!doctype html>
-<html lang="fr">
-
-
-
 <body>
     <section class="showcase">
         <div class="container grid">
@@ -28,6 +23,7 @@
         </div>
     </section>
     <script>
+        
         $.get('http://localhost:8888/IDAW-1/IMM/backend/user_profile.php', function(data) {
                 console.debug(data);
                 data = JSON.parse(data);

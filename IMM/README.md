@@ -4,12 +4,15 @@ Bienvenue sur la page Git dédiée au projet iMM de l'UV IDAW (P6) du groupe com
 
 ## Accueil
 
-
+Page d'accueil avec un graphique réalisé avec amCharts ainsi que l'historique des repas pris et les nutriments apportés.
 
 ## Profil
 
+On affiche simplement ici le profil de l'utilisateur. Nous avons un problème JSON sur cette page ne nous permettant pas d'afficher le profil comme souhaité.
+
 ## Statistiques
 
+Page ayant pour but d'afficher les repas pris, leur quantité et leur date sous la forme d'une liste.
 
 ## Aliments
 

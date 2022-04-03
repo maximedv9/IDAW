@@ -9,7 +9,7 @@ try {
     $conn = new PDO("mysql:host=localhost;dbname=iMM;charset=utf8", "root", "root", array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
 
     //Sélectionne toutes les valeurs dans la table consommer et les affiche
-    $sql = "SELECT utilisateur.NOM, utilisateur.PRENOM, utilisateur.EMAIL, utilisateur.SEXE, -(FLOOR(DATEDIFF(utilisateur.DATE_NAISSANCE, DATE( NOW() )) / 365.25)), utilisateur.NIV_PRATIQUE_SPORT, utilisateur.POIDS, utilisateur.TAILLE FROM `utilisateur` WHERE utilisateur.EMAIL='hugo.lim@etu.imt-lille-douai.fr'";
+    $sql = "SELECT utilisateur.NOM, utilisateur.PRENOM, utilisateur.EMAIL, utilisateur.SEXE, utilisateur.NIV_PRATIQUE_SPORT, utilisateur.POIDS, utilisateur.TAILLE FROM `utilisateur` WHERE utilisateur.EMAIL='hugo.lim@etu.imt-lille-douai.fr'";
     // $res['req']=$sql;
 
     $result = $conn->query($sql);
