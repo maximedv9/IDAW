@@ -1,8 +1,3 @@
-<!doctype html>
-<html lang="fr">
-
-
-
 <body>
     <section class="showcase">
         <div class="container grid">
@@ -28,7 +23,12 @@
         </div>
     </section>
     <script>
+<<<<<<< HEAD
         $.get('http://localhost/IDAW/IMM/backend/user_profile.php', function(data) {
+=======
+        
+        $.get('http://localhost:8888/IDAW-1/IMM/backend/user_profile.php', function(data) {
+>>>>>>> aa96bfc383b8920e4b940df1c203dad7eae6a03e
                 console.debug(data);
                 data = JSON.parse(data);
                 data.forEach(row => {

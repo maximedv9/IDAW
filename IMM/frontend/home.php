@@ -15,11 +15,12 @@
 
 <body>
     <section class="showcase">
-        <div class="container grid">
+        <div class="container-grid">
             <div class="cardchart">
                 <div id="chartdiv"></div>
             </div>
             <div class="card">
+                <div id="nutriments">
                 <h2>Nutriments consommés</h2>
                 <table class="table" id="nutrimentsTable">
                     <thead>
@@ -31,10 +32,12 @@
                     <tbody id="nutrimentsTableBody">
                     </tbody>
                 </table>
+                </div>
             </div>
             <div class="card">
+                <div id="historique">
                 <h2>Historique des aliments consommés</h2>
-                <table class="table">
+                <table class="table" id="historicTable">
                     <thead>
                         <tr>
                             <th scope="col">Aliment</th>
@@ -45,6 +48,8 @@
                     <tbody id="mealsTableBody">
                     </tbody>
                 </table>
+                </div>
+            </div>
     </section>
     <script>
         $.get('http://localhost/IDAW/IMM/backend/consommer.php', function(data) {

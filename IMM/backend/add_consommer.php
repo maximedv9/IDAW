@@ -14,19 +14,17 @@ try {
     $date = $_POST['date'];
     $foodname = $_POST['foodname'];
 
-    $sql = "INSERT INTO `consommer` (`EMAIL`, `ID_ALIMENT`, `QUANTITE`, `DATE`) VALUES ('hugo.lim@etu.imt-lille-douai.fr', (SELECT ID_ALIMENT FROM `aliment` WHERE LIB_ALIMENT=$foodname), $qte, $date);";
+    //arrive pas à voir si la commande sql passe
+    $firstsql = "SELECT ID_ALIMENT FROM `aliment` WHERE LIB_ALIMENT=$foodname;";
+    $libfood = $conn->query($firstsql);
+
+    $sql = "INSERT INTO `consommer` (`EMAIL`, `ID_ALIMENT`, `QUANTITE`, `DATE`) VALUES ('hugo.lim@etu.imt-lille-douai.fr', $libfood, $qte, $date);";
     $conn->exec($sql);
     echo 'Entrée ajoutée dans la table';
-
-    //Sélectionne toutes les valeurs dans la table user
-    $email = $_POST['email'];
-    $qte = $_POST['qte'];
-    $date = $_POST['date'];
-    $foodname = $_POST['foodname'];
-
-    $sql = "INSERT INTO `consommer` (`EMAIL`, `ID_ALIMENT`, `QUANTITE`, `DATE`) VALUES ($email, (SELECT ID_ALIMENT FROM `aliment` WHERE LIB_ALIMENT=$foodname), $qte, $date);";
-    $conn->exec($sql);
-    echo 'Entrée ajoutée dans la table';
-} catch (PDOException $e) {
+    } 
+    
+    catch (PDOException $e) {
     echo "Erreur : " . $e->getMessage();
 }
+
+?>

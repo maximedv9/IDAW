@@ -111,22 +111,26 @@ img {
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
   background-color: #fff;
+  flex-basis: 20%;
   border-radius: 30px;
   margin: 20px;
   padding: 20px;
 }
 
 .cardchart {
-  display: flex;
   height: 500px;
-  flex-direction: column;
+  flex-basis: 100%;
   background-color: #fff;
   border-radius: 30px;
   margin: 20px;
   padding: 20px;
+}
+
+.container-grid {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 

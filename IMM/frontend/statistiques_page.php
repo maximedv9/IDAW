@@ -7,7 +7,7 @@
     <section class="showcase">
         <div class="container grid">
             <div class="card">
-                <h2>Test git</h2>
+                <h2>Statistiques des repas</h2>
                 <table class="table">
                     <thead>
                         <tr>
