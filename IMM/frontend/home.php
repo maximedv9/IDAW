@@ -21,33 +21,33 @@
             </div>
             <div class="card">
                 <div id="nutriments">
-                <h2>Nutriments consommés</h2>
-                <table class="table" id="nutrimentsTable">
-                    <thead>
-                        <tr>
-                            <th scope="col">Nutriment</th>
-                            <th scope="col">Quantité</th>
-                        </tr>
-                    </thead>
-                    <tbody id="nutrimentsTableBody">
-                    </tbody>
-                </table>
+                    <h2>Nutriments consommés</h2>
+                    <table class="table" id="nutrimentsTable">
+                        <thead>
+                            <tr>
+                                <th scope="col">Nutriment</th>
+                                <th scope="col">Quantité</th>
+                            </tr>
+                        </thead>
+                        <tbody id="nutrimentsTableBody">
+                        </tbody>
+                    </table>
                 </div>
             </div>
             <div class="card">
                 <div id="historique">
-                <h2>Historique des aliments consommés</h2>
-                <table class="table" id="historicTable">
-                    <thead>
-                        <tr>
-                            <th scope="col">Aliment</th>
-                            <th scope="col">Quantité</th>
-                            <th scope="col">Date</th>
-                        </tr>
-                    </thead>
-                    <tbody id="mealsTableBody">
-                    </tbody>
-                </table>
+                    <h2>Historique des aliments consommés</h2>
+                    <table class="table" id="historicTable">
+                        <thead>
+                            <tr>
+                                <th scope="col">Aliment</th>
+                                <th scope="col">Quantité</th>
+                                <th scope="col">Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="mealsTableBody">
+                        </tbody>
+                    </table>
                 </div>
             </div>
     </section>
@@ -110,43 +110,43 @@
 
         chart.legend = new am4charts.Legend();
 
-        // chart.data = [{
-        //         country: "Lithuania",
-        //         litres: 501.9
-        //     },
-        //     {
-        //         country: "Czech Republic",
-        //         litres: 301.9
-        //     },
-        //     {
-        //         country: "Ireland",
-        //         litres: 201.1
-        //     },
-        //     {
-        //         country: "Germany",
-        //         litres: 165.8
-        //     },
-        //     {
-        //         country: "Australia",
-        //         litres: 139.9
-        //     },
-        //     {
-        //         country: "Austria",
-        //         litres: 128.3
-        //     },
-        //     {
-        //         country: "UK",
-        //         litres: 99
-        //     },
-        //     {
-        //         country: "Belgium",
-        //         litres: 60
-        //     },
-        //     {
-        //         country: "The Netherlands",
-        //         litres: 50
-        //     }
-        // ];
+        chart.data = [{
+                country: "Lithuania",
+                litres: 501.9
+            },
+            {
+                country: "Czech Republic",
+                litres: 301.9
+            },
+            {
+                country: "Ireland",
+                litres: 201.1
+            },
+            {
+                country: "Germany",
+                litres: 165.8
+            },
+            {
+                country: "Australia",
+                litres: 139.9
+            },
+            {
+                country: "Austria",
+                litres: 128.3
+            },
+            {
+                country: "UK",
+                litres: 99
+            },
+            {
+                country: "Belgium",
+                litres: 60
+            },
+            {
+                country: "The Netherlands",
+                litres: 50
+            }
+        ];
 
         // $("#name0").html();
 
