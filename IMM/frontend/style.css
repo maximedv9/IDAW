@@ -119,6 +119,19 @@ img {
   padding: 20px;
 }
 
+
+.historycard {
+  display: flex;
+  background-color: #fff;
+  flex-basis: 20%;
+  border-radius: 30px;
+  margin: 20px;
+  padding: 20px;
+  height: 500px; 
+  overflow: auto;
+  flex-grow: 1;
+}
+
 .cardchart {
   display: flex;
   height: 500px;
@@ -127,6 +140,7 @@ img {
   border-radius: 30px;
   margin: 20px;
   padding: 20px;
+  flex-grow: 1;
 }
 
 .container-grid {
@@ -136,5 +150,6 @@ img {
 
 
 }
+
 
 
